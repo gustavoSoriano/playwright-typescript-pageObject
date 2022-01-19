@@ -1,5 +1,5 @@
 enum Elements {
-    PAGE_TITLE = "text=Get started",
+    PAGE_TITLE = "text='Get started'",
 }
 
 export default Elements;

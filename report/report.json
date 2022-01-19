@@ -1,0 +1,120 @@
+[
+  {
+    "keyword": "Funcionalidade",
+    "name": "Validar HomePage Falcon",
+    "line": 3,
+    "id": "validar-homepage-falcon",
+    "tags": [],
+    "uri": "build/features/home.feature",
+    "elements": [
+      {
+        "id": "validar-homepage-falcon;eu-faço-login",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Eu faço login",
+        "tags": [
+          {
+            "name": "@HomePage",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/cucumber-tsflow/src/binding-decorator.ts:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/cucumber-tsflow/src/binding-decorator.ts:245"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1156000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 7,
+            "name": "Acesso à Home",
+            "match": {
+              "location": "node_modules/cucumber-tsflow/src/binding-decorator.ts:187"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1030000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 8,
+            "name": "Clicar no botão logar",
+            "match": {
+              "location": "node_modules/cucumber-tsflow/src/binding-decorator.ts:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 9,
+            "name": "Realize o login com sucesso",
+            "match": {
+              "location": "node_modules/cucumber-tsflow/src/binding-decorator.ts:207"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 312000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/cucumber-tsflow/src/binding-decorator.ts:251"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/cucumber-tsflow/src/binding-decorator.ts:251"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/cucumber-tsflow/src/binding-decorator.ts:90"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

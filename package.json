@@ -1,16 +1,33 @@
 {
-  "name": "ale-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "playwright test --headed && npm run report",
-    "report": "playwright show-report"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@playwright/test": "^1.17.2"
-  }
+    "name": "ale-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "report": "open ./report/cucumber-html-report.html",
+        "dev": "tsc -w --outDir build",
+        "copy": "mkdir -p build/features && cp -R features/* build/features",
+        "build": "tsc --outDir build && npm run test",
+        "test": "npm run copy && cucumber-js --parallel 1 -f json:report/report.json && node report.js && cat report/report.json | npx cucumber-junit > report/junitreport.xml"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@playwright/test": "^1.17.2",
+        "@types/chai": "^4.1.7",
+        "@types/cucumber": "^4.0.5",
+        "chai": "^4.2.0",
+        "cucumber": "^5.1.0",
+        "cucumber-pretty": "^1.5.0",
+        "cucumber-tsflow": "^3.2.0",
+        "cucumberjs-junitxml": "^1.0.0",
+        "ts-node": "^8.0.3",
+        "typescript": "^3.3.3333"
+    },
+    "dependencies": {
+        "concurrently": "^7.0.0",
+        "cucumber-html-reporter": "^5.5.0",
+        "open": "^8.4.0"
+    }
 }
