@@ -3,12 +3,13 @@ import { chromium } from "@playwright/test";
 import global from "../types/globalthis";
 import { HookScenarioResult, Status } from "cucumber";
 
-
 @binding()
 class Hooks {
+    private _worldObj: any;
+    
     @before()
     public async beforeAllScenarios(): Promise<void> {
-        global.browser = await chromium.launch({ headless: false });
+        global.browser = await chromium.launch({ headless: true });
         global.context = await global.browser.newContext();
         global.page = await global.context.newPage();
     }
@@ -26,7 +27,7 @@ class Hooks {
             const screenshot = await global.page.screenshot({
                 path: "screenshot.png",
             });
-            // this.attach(screenshot, "image/png");
+            this._worldObj.attach(screenshot, "image/png")
         }
     }
 }
